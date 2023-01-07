@@ -1,7 +1,6 @@
 {
   "name": "casa-scraper",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -13,7 +12,14 @@
     "express": "^4.18.2",
     "puppeteer": "^19.4.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  }
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolas-synaptic/housescrap-script.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nicolas-synaptic/housescrap-script/issues"
+  },
+  "homepage": "https://github.com/Nicolas-synaptic/housescrap-script#readme",
+  "description": ""
 }

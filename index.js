@@ -20,14 +20,21 @@ app.get("/",async (req, res) => {
 
         $rents.forEach(($rent) => {
 
+
+            //hacer un 
+
            data.push({
-              price : ( ($rent.querySelector('.price-tag-fraction').textContent < 1000)
-                ? $rent.querySelector('.price-tag-fraction').textContent*35000
-                : parseInt($rent.querySelector('.price-tag-fraction').textContent) ),
+
+              price : ( ($rent.querySelector('.price-tag-fraction').textContent.replaceAll('.','') < 1000)
+                ? parseInt($rent.querySelector('.price-tag-fraction').textContent.replaceAll('.',''))*35000
+                : parseInt($rent.querySelector('.price-tag-fraction').textContent.replaceAll('.','')) ),
+
               size  : $rent.querySelector('.ui-search-card-attributes__attribute:nth-child(1)').textContent,
+
               rooms : ($rent.querySelector('.ui-search-card-attributes__attribute:nth-child(2)')
                 ? $rent.querySelector('.ui-search-card-attributes__attribute:nth-child(2)').textContent
                 : " " ),
+                
               place : $rent.querySelector('.ui-search-item__location').textContent,
            })
         })
