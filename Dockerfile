@@ -1,4 +1,6 @@
-FROM node:19.3.0-alpine3.16
+#FROM node:19.3.0-alpine3.16
+
+FROM ghcr.io/puppeteer/puppeteer:latest
 
 WORKDIR /app
 
@@ -10,4 +12,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ['npm', 'start']
+CMD ['node', 'index.js']
